@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="style/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>AILife</title>
+</head>
+<!-- 開始輸入字時 加上--chating -->
+
+<body class="bodyBg" id="bodyBg">
+
+    <button id="menu_btn" class="menu_btn" name="button">
+        <span></span>
+    </button>
+
+    <main>
+        <header id="header">
+            <h1>ailife</h1>
+            <h2>we are starting a new life</h2>
+        </header>
+
+
+
+
+        <!-- 輸入區 -->
+        <div class="chat">
+            <ul class="chat__area">
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quam dicta facere? Dolor laudantium
+                    dignissimos minus? Enim saepe ipsa quidem, numquam minus officiis ad aliquid blanditiis labore,
+                    dolor neque fugiat!</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quam dicta facere? Dolor laudantium
+                    dignissimos minus? Enim saepe ipsa quidem, numquam minus officiis ad aliquid blanditiis labore,
+                    dolor neque fugiat!</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quam dicta facere? Dolor laudantium
+                    dignissimos minus? Enim saepe ipsa quidem, numquam minus officiis ad aliquid blanditiis labore,
+                    dolor neque fugiat!</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quam dicta facere? Dolor laudantium
+                    dignissimos minus? Enim saepe ipsa quidem, numquam minus officiis ad aliquid blanditiis labore,
+                    dolor neque fugiat!</li>
+            </ul>
+
+
+
+            <label class="chat__tool">
+                <textarea placeholder="Send a message" rows="1" id="sendMag"></textarea>
+                <button class="enter_btn"></button>
+            </label>
+            <code
+                class="chat__txt">Free Research Preview. ChatGPT may produce inaccurate information about people, places, or facts.</code>
+        </div>
+        <!-- 輸入區 end -->
+
+
+
+        <!-- info -->
+        <div class="info">
+            <div class="info__box">
+                <i class="icon_examples"></i>
+                <h3>Examples</h3>
+                <ul>
+                    <li>Explain quantum computing in simple terms
+                    </li>
+                    <li>
+                        Got any creative ideas for a 10 year old’s birthday?
+                    </li>
+                    <li>
+                        How do I make an HTTP request in Javascript?
+                    </li>
+                </ul>
+            </div>
+
+            <div class="info__box">
+                <i class="icon_capabilities"></i>
+                <h3>Capabilities</h3>
+                <ul>
+                    <li>
+                        Remembers what user said earlier in the conversation
+                    </li>
+                    <li>
+                        Allows user to provide follow-up corrections
+                    </li>
+                    <li>
+                        Trained to decline inappropriate requests
+                    </li>
+                </ul>
+            </div>
+
+            <div class="info__box">
+                <i class="icon_limitations"></i>
+                <h3>Limitations</h3>
+                <ul>
+                    <li>
+                        May occasionally generate incorrect information
+                    </li>
+                    <li>
+                        May occasionally produce harmful instructions or biased content
+                    </li>
+                    <li>
+                        Limited knowledge of world and events after 2021
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- info end -->
+    </main>
+
+
+    <!-- 功能tool -->
+    <aside>
+
+        <button id="close_btn" class="close_btn" name="button">
+            <span></span>
+        </button>
+
+        <div class="newChat">
+            <button class="newChat_btn">
+                New chat
+            </button>
+
+            <ul class="newChat__list">
+                <li>
+                    <span>Lorem ipsum, dolor sit amet dolor sit amet</span>
+                    <i class="icon_edit"></i>
+                    <i class="icon_delete"></i>
+                </li>
+                <li>
+                    <span>dolor sit ametdolor sit ametdolor sit amet</span>
+                    <i class="icon_edit"></i>
+                    <i class="icon_delete"></i>
+                </li>
+                <li>
+                    <span>dolor sit ametdolor sit ametdolor sit amet</span>
+                    <i class="icon_edit"></i>
+                    <i class="icon_delete"></i>
+                </li>
+            </ul>
+        </div>
+
+
+        <ul class="menu">
+            <li>
+                <i class="icon_delete"></i>
+                Clear conversations
+            </li>
+            <li>
+                <i class="icon_member"></i>
+                Upgrade to Plus
+            </li>
+            <li>
+                <i class="icon_tool"></i>
+                Settings
+            </li>
+            <li>
+                <i class="icon_help"></i>
+                Get help
+            </li>
+            <li>
+                <i class="icon_logout"></i>
+                Log out
+            </li>
+        </ul>
+    </aside>
+    <!-- 功能tool end -->
+
+
+
+    <!-- loading -->
+    <div class="loading" id="loading">
+        <div class="loading_pic">
+            <div class="loading_ball">
+                <img src="images/loading_ball.svg" alt="">
+            </div>
+            <div class="loading_body">
+                <img src="images/loading_logo.svg" alt="">
+            </div>
+        </div>
+        <div class="loading_txt">
+            <img src="images/loading_ball1.svg" alt="">
+            <img src="images/loading_ball2.svg" alt="">
+            <img src="images/loading_logoTxt.svg" alt="">
+        </div>
+    </div>
+    <!-- loading end -->
+
+
+
+    <script>
+        $('#sendMag').focus(() => {
+            $('#bodyBg').addClass('--chating')
+        })
+        $('#header').click(() => {
+            $('#bodyBg').removeClass('--chating')
+        })
+        $('#menu_btn').click(() => {
+            $('#bodyBg').addClass('--active')
+        })
+        $('#close_btn').click(() => {
+            $('#bodyBg').toggleClass('--active')
+        })
+
+        $(document).ready(()=>{ 
+            setTimeout(()=>{ $('#loading').addClass('--hide')},2000);
+            setTimeout(()=>{ $('#loading').remove()},2800);
+        })
+    </script>
+</body>
+
+</html>
