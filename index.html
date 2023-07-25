@@ -17,14 +17,14 @@
 
     <main>
         <div class="slogan">
-            <h1>GLOBAL CONCIERGE SERVICE</h1>
-            <h2>2298 Management</h2>
+            <h1 data-aos="fade-down" data-aos-duration="1000" data-aos-once="true">GLOBAL CONCIERGE SERVICE</h1>
+            <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">2298 Management</h2>
         </div>
         
 
 
         <!-- contact -->
-        <ul class="contact">
+        <ul class="contact" data-aos="fade-in" data-aos-duration="1000" data-aos-once="true" data-aos-delay="1000">
             <li>
                 <a href="https://api.whatsapp.com/send?phone=+6580659982">
                     <i class="icon_wapp"></i>
@@ -37,21 +37,25 @@
 
         <!-- info -->
         <ul class="info">
-            <li>
-                <i class="icon_address"></i>
-                Level 8 The Metropolis Tower 2
-                11 North Buona Vista Drive
-                Singapore 138589
+            <li data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" data-aos-delay="1500">
+                <a class="no_hand">
+                    <i class="icon_address"></i>
+                    <code>
+                        Level 8 The Metropolis Tower 2<br>
+                        11 North Buona Vista Drive<br>
+                        Singapore 138589
+                    </code>
+                </a>
             </li>
 
-            <li>
+            <li data-aos="fade-down" data-aos-duration="1000" data-aos-once="true" data-aos-delay="1600">
                 <a href="mailto:sales@2298.me">
                     <i class="icon_mail"></i>
                     <code>sales@2298.me</code>
                 </a>
             </li>
 
-            <li>
+            <li data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" data-aos-delay="1500">
                 <a href="tel:+6562242298">
                     <i class="icon_tel"></i>
                     <code>+65 6224 2298</code>
@@ -64,22 +68,22 @@
 
 
     <!-- loading -->
-    <div class="loading" id="loading" style="display: none;">
+    <!-- <div class="loading" id="loading">
         <div class="loading__ring">
             <div></div>
             <div></div>
             <div></div>
             <div></div>
         </div>
-    </div>
+    </div> -->
     <!-- loading end -->
 
 
 
     <script>
         $(document).ready(()=>{ 
-            setTimeout(()=>{ $('#loading').addClass('--hide')},2000);
-            setTimeout(()=>{ $('#loading').remove()},2800);
+            setTimeout(()=>{ $('#loading').addClass('--hide')},1000);
+            setTimeout(()=>{ $('#loading').remove()},1800);
         })
 
         AOS.init();
