@@ -1,14 +1,14 @@
 // 字體顏色
 $txt_color: (
     primary: #7C7B7B,
-    secondary: #222,
+    secondary: #000,
     white: #fff,
 );
 // 背景色
 $bg_color: (
-    primary: #fff,
-    secondary: #7C7B7B,
-    black: #222,
+    primary: #7C7B7B,
+    secondary: #fff,
+    black: #000,
     white_alpha: rgba(255, 255, 255, .5),
     black_alpha: rgba(0, 0, 0, 0.7),
     lightblack_alpha: rgba(124, 123, 123, .3),

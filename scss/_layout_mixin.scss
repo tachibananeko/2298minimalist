@@ -76,21 +76,16 @@
 
 // icon設定
 $icon: (
-	'capabilities',
-	'delete',
-	'examples',
-	'help',
-	'limitations',
-	'logout',
-	'member',
-	'tool',
-	'edit',
+	'address',
+	'mail',
+	'tel',
+	'ig',
+	'wapp',
 );
 
 @each $name in $icon {
 	.icon_#{$name} {
 		display: inline-block;
-		//若沒有svg就讀png
 		background: url(../images/icon_#{$name}.svg) no-repeat center / contain;
 	}
 }

@@ -8,24 +8,29 @@
     <meta name="format-detection" content="telephone=no" />
     <link rel="stylesheet" href="style/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <title>AILife</title>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>2298 Management</title>
 </head>
-<!-- 開始輸入字時 加上--chating -->
 
 <body class="bodyBg" id="bodyBg">
 
     <main>
         <div class="slogan">
-            <h1>2298 Management</h1>
-            <h2>we are starting a new life</h2>
+            <h1>GLOBAL CONCIERGE SERVICE</h1>
+            <h2>2298 Management</h2>
         </div>
         
 
 
         <!-- contact -->
         <ul class="contact">
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
+            <li>
+                <a href="https://api.whatsapp.com/send?phone=+6580659982">
+                    <i class="icon_wapp"></i>
+                </a>
+            </li>
+            <li><i class="icon_ig"></i></li>
         </ul>
         <!-- contact end -->
 
@@ -33,15 +38,24 @@
         <!-- info -->
         <ul class="info">
             <li>
-                <i class="icon_examples"></i>
+                <i class="icon_address"></i>
+                Level 8 The Metropolis Tower 2
+                11 North Buona Vista Drive
+                Singapore 138589
             </li>
 
             <li>
-                <i class="icon_capabilities"></i>
+                <a href="mailto:sales@2298.me">
+                    <i class="icon_mail"></i>
+                    <code>sales@2298.me</code>
+                </a>
             </li>
 
             <li>
-                <i class="icon_limitations"></i>
+                <a href="tel:+6562242298">
+                    <i class="icon_tel"></i>
+                    <code>+65 6224 2298</code>
+                </a>
             </li>
         </ul>
         <!-- info end -->
@@ -50,31 +64,25 @@
 
 
     <!-- loading -->
-    <div class="loading" id="loading">
-        
+    <div class="loading" id="loading" style="display: none;">
+        <div class="loading__ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </div>
     <!-- loading end -->
 
 
 
     <script>
-        $('#sendMag').focus(() => {
-            $('#bodyBg').addClass('--chating')
-        })
-        $('#header').click(() => {
-            $('#bodyBg').removeClass('--chating')
-        })
-        $('#menu_btn').click(() => {
-            $('#bodyBg').addClass('--active')
-        })
-        $('#close_btn').click(() => {
-            $('#bodyBg').toggleClass('--active')
-        })
-
         $(document).ready(()=>{ 
             setTimeout(()=>{ $('#loading').addClass('--hide')},2000);
             setTimeout(()=>{ $('#loading').remove()},2800);
         })
+
+        AOS.init();
     </script>
 </body>
 
